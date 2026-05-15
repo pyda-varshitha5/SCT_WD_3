@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Tic Tac Toe</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HOME -->
+    <div id="homeScreen" class="screen active">
+
+      <h1>Tic Tac Toe</h1>
+
+      <p class="subtitle">
+        Choose your game mode
+      </p>
+
+      <div class="button-group">
+
+        <button class="main-btn"
+          onclick="selectMode('computer')">
+
+          Play With Computer
+
+        </button>
+
+        <button class="main-btn"
+          onclick="selectMode('player')">
+
+          2 Players
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOARD SIZE -->
+    <div id="sizeScreen" class="screen">
+
+      <h2>Select Board Size</h2>
+
+      <div class="size-buttons">
+
+        <button onclick="startCountdown(3)">
+          3 × 3
+        </button>
+
+        <button onclick="startCountdown(4)">
+          4 × 4
+        </button>
+
+        <button onclick="startCountdown(5)">
+          5 × 5
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+    <div id="countdownScreen" class="screen">
+
+      <h1 id="countdown">3</h1>
+
+    </div>
+
+
+    <!-- GAME -->
+    <div id="gameScreen" class="screen">
+
+      <div class="top-bar">
+
+        <h2 id="gameTitle">
+          Tic Tac Toe
+        </h2>
+
+        <button class="back-btn"
+          onclick="goHome()">
+
+          Home
+
+        </button>
+
+      </div>
+
+      <p id="status">
+        Player X Turn
+      </p>
+
+      <div id="board"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
